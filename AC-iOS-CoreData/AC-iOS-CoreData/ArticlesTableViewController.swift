@@ -16,6 +16,8 @@ class ArticlesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getArticles()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 90
         if let loadedArticles = DataManager.manager.loadArticlesFromPersistentStore() {
             self.articles = loadedArticles
             DispatchQueue.main.async {
@@ -52,12 +54,12 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleTableViewCell
         
         let article = articles[indexPath.row]
         
-        cell.textLabel?.text = article.value(forKeyPath: "title") as? String
-        cell.detailTextLabel?.text = article.value(forKeyPath: "abstract") as? String
+        cell.articleTitleLabel.text = article.value(forKeyPath: "title") as? String
+        cell.abstractSummaryLabel.text = article.value(forKeyPath: "abstract") as? String
         
         return cell
     }

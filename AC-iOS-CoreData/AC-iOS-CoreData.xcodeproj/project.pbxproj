@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AB0B0901EFC75F20023782C /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B08F1EFC75F20023782C /* ArticleTableViewCell.swift */; };
 		3AFE4AF51EFC4A4100716E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4AF41EFC4A4100716E50 /* AppDelegate.swift */; };
 		3AFE4AFA1EFC4A4100716E50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFE4AF81EFC4A4100716E50 /* Main.storyboard */; };
 		3AFE4AFD1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4AFB1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AB0B08F1EFC75F20023782C /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		3AFE4AF11EFC4A4100716E50 /* AC-iOS-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFE4AF41EFC4A4100716E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AFE4AF91EFC4A4100716E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,10 +107,11 @@
 		3AFE4AF31EFC4A4100716E50 /* AC-iOS-CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3AB0B08F1EFC75F20023782C /* ArticleTableViewCell.swift */,
 				3AFE4B271EFC4BDD00716E50 /* Controllers */,
-				3AFE4B261EFC4BCE00716E50 /* Supporting Files */,
 				3AFE4B2A1EFC4D5100716E50 /* Networking */,
 				3AFE4B2D1EFC522A00716E50 /* Core Data */,
+				3AFE4B261EFC4BCE00716E50 /* Supporting Files */,
 				3AFE4B251EFC4BC100716E50 /* UI */,
 			);
 			path = "AC-iOS-CoreData";
@@ -317,6 +320,7 @@
 				3AFE4AF51EFC4A4100716E50 /* AppDelegate.swift in Sources */,
 				3AFE4B2F1EFC5BCC00716E50 /* ArticlesTableViewController.swift in Sources */,
 				3AFE4AFD1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld in Sources */,
+				3AB0B0901EFC75F20023782C /* ArticleTableViewCell.swift in Sources */,
 				3AFE4B311EFC660D00716E50 /* Article+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +570,7 @@
 				3AFE4B1E1EFC4A4100716E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AFE4B1F1EFC4A4100716E50 /* Build configuration list for PBXNativeTarget "AC-iOS-CoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +579,7 @@
 				3AFE4B211EFC4A4100716E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AFE4B221EFC4A4100716E50 /* Build configuration list for PBXNativeTarget "AC-iOS-CoreDataUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +588,7 @@
 				3AFE4B241EFC4A4100716E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
