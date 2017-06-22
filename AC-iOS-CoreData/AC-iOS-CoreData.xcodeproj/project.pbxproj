@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3AFE4AF51EFC4A4100716E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4AF41EFC4A4100716E50 /* AppDelegate.swift */; };
-		3AFE4AF71EFC4A4100716E50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4AF61EFC4A4100716E50 /* ViewController.swift */; };
 		3AFE4AFA1EFC4A4100716E50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFE4AF81EFC4A4100716E50 /* Main.storyboard */; };
 		3AFE4AFD1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4AFB1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld */; };
 		3AFE4AFF1EFC4A4100716E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFE4AFE1EFC4A4100716E50 /* Assets.xcassets */; };
 		3AFE4B021EFC4A4100716E50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFE4B001EFC4A4100716E50 /* LaunchScreen.storyboard */; };
 		3AFE4B0D1EFC4A4100716E50 /* AC_iOS_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B0C1EFC4A4100716E50 /* AC_iOS_CoreDataTests.swift */; };
 		3AFE4B181EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B171EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift */; };
+		3AFE4B291EFC4C0700716E50 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B281EFC4C0700716E50 /* APIRequestManager.swift */; };
+		3AFE4B2F1EFC5BCC00716E50 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B2E1EFC5BCC00716E50 /* ArticlesTableViewController.swift */; };
+		3AFE4B311EFC660D00716E50 /* Article+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B301EFC660D00716E50 /* Article+Extension.swift */; };
+		3AFE4B331EFC670000716E50 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B321EFC670000716E50 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		3AFE4AF11EFC4A4100716E50 /* AC-iOS-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFE4AF41EFC4A4100716E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AFE4AF61EFC4A4100716E50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3AFE4AF91EFC4A4100716E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AFE4AFC1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AC_iOS_CoreData.xcdatamodel; sourceTree = "<group>"; };
 		3AFE4AFE1EFC4A4100716E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		3AFE4B131EFC4A4100716E50 /* AC-iOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AC-iOS-CoreDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFE4B171EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AC_iOS_CoreDataUITests.swift; sourceTree = "<group>"; };
 		3AFE4B191EFC4A4100716E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AFE4B281EFC4C0700716E50 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
+		3AFE4B2E1EFC5BCC00716E50 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
+		3AFE4B301EFC660D00716E50 /* Article+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+Extension.swift"; sourceTree = "<group>"; };
+		3AFE4B321EFC670000716E50 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,11 @@
 		3AFE4AF31EFC4A4100716E50 /* AC-iOS-CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				3AFE4AF41EFC4A4100716E50 /* AppDelegate.swift */,
-				3AFE4AF61EFC4A4100716E50 /* ViewController.swift */,
-				3AFE4AF81EFC4A4100716E50 /* Main.storyboard */,
-				3AFE4AFE1EFC4A4100716E50 /* Assets.xcassets */,
-				3AFE4B001EFC4A4100716E50 /* LaunchScreen.storyboard */,
-				3AFE4B031EFC4A4100716E50 /* Info.plist */,
-				3AFE4AFB1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld */,
+				3AFE4B271EFC4BDD00716E50 /* Controllers */,
+				3AFE4B261EFC4BCE00716E50 /* Supporting Files */,
+				3AFE4B2A1EFC4D5100716E50 /* Networking */,
+				3AFE4B2D1EFC522A00716E50 /* Core Data */,
+				3AFE4B251EFC4BC100716E50 /* UI */,
 			);
 			path = "AC-iOS-CoreData";
 			sourceTree = "<group>";
@@ -126,6 +130,51 @@
 				3AFE4B191EFC4A4100716E50 /* Info.plist */,
 			);
 			path = "AC-iOS-CoreDataUITests";
+			sourceTree = "<group>";
+		};
+		3AFE4B251EFC4BC100716E50 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3AFE4AF81EFC4A4100716E50 /* Main.storyboard */,
+				3AFE4AFE1EFC4A4100716E50 /* Assets.xcassets */,
+				3AFE4B001EFC4A4100716E50 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		3AFE4B261EFC4BCE00716E50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AFE4AF41EFC4A4100716E50 /* AppDelegate.swift */,
+				3AFE4B301EFC660D00716E50 /* Article+Extension.swift */,
+				3AFE4B031EFC4A4100716E50 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AFE4B271EFC4BDD00716E50 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AFE4B2E1EFC5BCC00716E50 /* ArticlesTableViewController.swift */,
+				3AFE4B321EFC670000716E50 /* DataManager.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3AFE4B2A1EFC4D5100716E50 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3AFE4B281EFC4C0700716E50 /* APIRequestManager.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		3AFE4B2D1EFC522A00716E50 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				3AFE4AFB1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFE4AF71EFC4A4100716E50 /* ViewController.swift in Sources */,
+				3AFE4B291EFC4C0700716E50 /* APIRequestManager.swift in Sources */,
+				3AFE4B331EFC670000716E50 /* DataManager.swift in Sources */,
 				3AFE4AF51EFC4A4100716E50 /* AppDelegate.swift in Sources */,
+				3AFE4B2F1EFC5BCC00716E50 /* ArticlesTableViewController.swift in Sources */,
 				3AFE4AFD1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld in Sources */,
+				3AFE4B311EFC660D00716E50 /* Article+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
