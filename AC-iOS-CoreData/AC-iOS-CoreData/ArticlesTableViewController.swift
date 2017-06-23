@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+fileprivate let apiURLRoot = "https://api.nytimes.com/svc/topstories/v2/"
+fileprivate let apiKeyQueryKey = "api-key"
+fileprivate let apiKeyQueryValue = "f41c1b23419a4f55b613d0a243ed3243"
+
 class ArticlesTableViewController: UITableViewController {
     
     var articles: [NSManagedObject] = []
@@ -25,7 +29,7 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     func getArticles() {
-        APIRequestManager.manager.getData(endpoint: "https://api.nytimes.com/svc/topstories/v2/opinion.json?api-key=f41c1b23419a4f55b613d0a243ed3243") { (data: Data?) in
+        APIRequestManager.manager.getData(endpoint: getTopStoriesURL()!) { (data: Data?) in
             if let validData = data {
                 do {
                     if let jsonData = try JSONSerialization.jsonObject(with: validData, options: []) as? [String:AnyObject],
@@ -45,6 +49,17 @@ class ArticlesTableViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    func getTopStoriesURL() -> URL? {
+        let topStoriesURL = "\(apiURLRoot)opinion.json"
+        guard var urlComponents = URLComponents(string: topStoriesURL) else { return nil}
+        
+        let apiKeyQuery = URLQueryItem(name: apiKeyQueryKey, value: apiKeyQueryValue)
+        urlComponents.queryItems = [apiKeyQuery]
+        
+        guard let url = urlComponents.url else { return nil }
+        return url
     }
     
     // MARK: - Table view data source
