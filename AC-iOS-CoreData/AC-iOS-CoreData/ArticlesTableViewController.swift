@@ -16,14 +16,12 @@ class ArticlesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getArticles()
+        giveTVCellsDynamicHeights()
+    }
+    
+    func giveTVCellsDynamicHeights() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 90
-        if let loadedArticles = DataManager.manager.loadArticlesFromPersistentStore() {
-            self.articles = loadedArticles
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
     }
     
     func getArticles() {
@@ -34,6 +32,12 @@ class ArticlesTableViewController: UITableViewController {
                         let results = jsonData["results"] as? [[String:AnyObject]]{
                         for result in results {
                             Article.populate(from: result)
+                        }
+                        if let loadedArticles = DataManager.manager.loadArticlesFromPersistentStore() {
+                            self.articles = loadedArticles
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
                         }
                     }
                 } catch let error as NSError {

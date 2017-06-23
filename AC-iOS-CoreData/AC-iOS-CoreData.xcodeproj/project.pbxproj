@@ -13,8 +13,6 @@
 		3AFE4AFD1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4AFB1EFC4A4100716E50 /* AC_iOS_CoreData.xcdatamodeld */; };
 		3AFE4AFF1EFC4A4100716E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFE4AFE1EFC4A4100716E50 /* Assets.xcassets */; };
 		3AFE4B021EFC4A4100716E50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFE4B001EFC4A4100716E50 /* LaunchScreen.storyboard */; };
-		3AFE4B0D1EFC4A4100716E50 /* AC_iOS_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B0C1EFC4A4100716E50 /* AC_iOS_CoreDataTests.swift */; };
-		3AFE4B181EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B171EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift */; };
 		3AFE4B291EFC4C0700716E50 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B281EFC4C0700716E50 /* APIRequestManager.swift */; };
 		3AFE4B2F1EFC5BCC00716E50 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B2E1EFC5BCC00716E50 /* ArticlesTableViewController.swift */; };
 		3AFE4B311EFC660D00716E50 /* Article+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE4B301EFC660D00716E50 /* Article+Extension.swift */; };
@@ -48,11 +46,7 @@
 		3AFE4B011EFC4A4100716E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AFE4B031EFC4A4100716E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AFE4B081EFC4A4100716E50 /* AC-iOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AC-iOS-CoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AFE4B0C1EFC4A4100716E50 /* AC_iOS_CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AC_iOS_CoreDataTests.swift; sourceTree = "<group>"; };
-		3AFE4B0E1EFC4A4100716E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AFE4B131EFC4A4100716E50 /* AC-iOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AC-iOS-CoreDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AFE4B171EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AC_iOS_CoreDataUITests.swift; sourceTree = "<group>"; };
-		3AFE4B191EFC4A4100716E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AFE4B281EFC4C0700716E50 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		3AFE4B2E1EFC5BCC00716E50 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		3AFE4B301EFC660D00716E50 /* Article+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+Extension.swift"; sourceTree = "<group>"; };
@@ -84,12 +78,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AB0B0911EFD8ADF0023782C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AB0B08F1EFC75F20023782C /* ArticleTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		3AFE4AE81EFC4A4100716E50 = {
 			isa = PBXGroup;
 			children = (
 				3AFE4AF31EFC4A4100716E50 /* AC-iOS-CoreData */,
-				3AFE4B0B1EFC4A4100716E50 /* AC-iOS-CoreDataTests */,
-				3AFE4B161EFC4A4100716E50 /* AC-iOS-CoreDataUITests */,
 				3AFE4AF21EFC4A4100716E50 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 		3AFE4AF31EFC4A4100716E50 /* AC-iOS-CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				3AB0B08F1EFC75F20023782C /* ArticleTableViewCell.swift */,
+				3AB0B0911EFD8ADF0023782C /* Views */,
 				3AFE4B271EFC4BDD00716E50 /* Controllers */,
 				3AFE4B2A1EFC4D5100716E50 /* Networking */,
 				3AFE4B2D1EFC522A00716E50 /* Core Data */,
@@ -115,24 +115,6 @@
 				3AFE4B251EFC4BC100716E50 /* UI */,
 			);
 			path = "AC-iOS-CoreData";
-			sourceTree = "<group>";
-		};
-		3AFE4B0B1EFC4A4100716E50 /* AC-iOS-CoreDataTests */ = {
-			isa = PBXGroup;
-			children = (
-				3AFE4B0C1EFC4A4100716E50 /* AC_iOS_CoreDataTests.swift */,
-				3AFE4B0E1EFC4A4100716E50 /* Info.plist */,
-			);
-			path = "AC-iOS-CoreDataTests";
-			sourceTree = "<group>";
-		};
-		3AFE4B161EFC4A4100716E50 /* AC-iOS-CoreDataUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3AFE4B171EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift */,
-				3AFE4B191EFC4A4100716E50 /* Info.plist */,
-			);
-			path = "AC-iOS-CoreDataUITests";
 			sourceTree = "<group>";
 		};
 		3AFE4B251EFC4BC100716E50 /* UI */ = {
@@ -329,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFE4B0D1EFC4A4100716E50 /* AC_iOS_CoreDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFE4B181EFC4A4100716E50 /* AC_iOS_CoreDataUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
